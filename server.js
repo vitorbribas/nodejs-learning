@@ -5,7 +5,13 @@ const mongoose = require('mongoose'); // import Mongoose to work with MongoDB da
 const app = express();
 
 // Init DB
-mongoose.connect('mongodb://localhost:27017/nodeapi', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(
+  'mongodb://localhost:27017/nodeapi',
+  {useNewUrlParser: true, useUnifiedTopology: true}
+);
+
+// Require app models
+require('./src/models/Product');  // require Product model
 
 // Routes
 app.get('/', (req, res) => {  // (requisition, response)
