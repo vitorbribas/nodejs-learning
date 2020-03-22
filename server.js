@@ -1,5 +1,6 @@
 const express = require('express'); // import Express and return a function
 const mongoose = require('mongoose'); // import Mongoose to work with MongoDB database
+const requireDir = require('require-dir');  // import RequireDir to require all models once
 
 // Init Application
 const app = express();
@@ -11,7 +12,7 @@ mongoose.connect(
 );
 
 // Require app models
-require('./src/models/Product');  // require Product model
+requireDir('./src/models');  // require Product model
 
 // Routes
 app.get('/', (req, res) => {  // (requisition, response)
