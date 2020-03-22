@@ -17,15 +17,7 @@ requireDir('./src/models');  // require Product model
 const Product = mongoose.model('Product');
 
 // Routes
-app.get('/', (req, res) => {  // (requisition, response)
-  Product.create({
-    title: 'Luminária',
-    description: 'Cor preta',
-    url: 'https://casaevideodigital.vteximg.com.br/arquivos/ids/193831-1000-1000/Luminaria-de-Mesa-Asus-Copa-Preta-Bivolt-1489895.jpg?v=636782267778700000'
-  });
-
-  return res.send('Hello, Vitão');
-});
+app.use('/api', require('./src/routes'));
 
 // Uses port 3001 for application
 app.listen(3001);
