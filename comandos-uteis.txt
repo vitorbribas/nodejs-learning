@@ -1,0 +1,6 @@
+# Criar package.json
+  > npm init -y
+# Instalar dependências
+  > npm install <dependencia>
+# Rodar servidor
+  > node <arquivo.js> ex.: node server.js
