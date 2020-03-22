@@ -1,10 +1,12 @@
 const express = require('express'); // import Express and return a function
+const cors = require('cors'); // import Cors to permit external domais to access the API
 const mongoose = require('mongoose'); // import Mongoose to work with MongoDB database
 const requireDir = require('require-dir');  // import RequireDir to require all models once
 
 // Init Application
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 // Init DB
 mongoose.connect(
