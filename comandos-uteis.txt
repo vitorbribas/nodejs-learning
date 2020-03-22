@@ -4,3 +4,7 @@
   > npm install <dependencia>
 # Rodar servidor
   > node <arquivo.js> ex.: node server.js
+# Instalar dependência apenas no ambiente de desenvolvimento
+  > npm install -D <dependencia>
+# Rodar scripts presentes no arquivo package.json
+  > npm run <nome_script>
